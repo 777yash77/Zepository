@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
-import Assets from "./pages/Assets";
-import AssetDetails from "./pages/AssetDetails";
-import ProtectedRoute from "./components/ProtectedRoute";
-import AddAsset from "./pages/AddAsset";
-import EditAsset from "./pages/EditAsset";
-import SendToService from "./pages/SendToService";
-import UnderService from "./pages/ServiceList";
+import Login from "./components/Auth/Login";
+import Signup from "./components/Auth/Signup";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Assets from "./components/Assets/Assets";
+import AssetDetails from "./components/Assets/AssetDetails";
+import ProtectedRoute from "./components/common/ProtectedRoute";
+import AddAsset from "./components/Assets/AddAsset";
+import EditAsset from "./components/Assets/EditAsset";
+import SendToService from "./components/Service/SendToService";
+import UnderService from "./components/Service/ServiceList";
 
 function App() {
   return (

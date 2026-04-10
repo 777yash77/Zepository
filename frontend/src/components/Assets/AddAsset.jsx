@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import api from "../services/api";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import styles from "./public/AddAsset.module.css";
+import api from "../../services/api";
+import Header from "../common/Header";
+import Footer from "../common/Footer";
 
 export default function AddAsset() {
   const [types, setTypes] = useState([]);

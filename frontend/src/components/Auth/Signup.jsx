@@ -1,7 +1,6 @@
 import { useState } from "react";
-import api from "../services/api";
+import api from "../../services/api";
 import { useNavigate, Link } from "react-router-dom";
-import styles from "./public/Signup.module.css";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -41,21 +40,21 @@ export default function Signup() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.cardDiv}>
-        <h2 className={styles.title}>SIGNUP</h2>
+    <div className="w-full h-screen flex items-center justify-center">
+      <div className="relative w-1/3 h-4/5 flex flex-col items-center justify-center rounded-lg shadow-xl">
+        <h2 className="text-2xl font-bold pb-5">SIGNUP</h2>
 
-        {error && <p className={styles.error}>{error}</p>}
+        {error && <p className="text-red-500">{error}</p>}
 
-        <div className={styles.formDiv}>
-          <form onSubmit={handleSubmit} className={styles.form}>
+        <div className="flex w-4/5 h-4/5 flex-col items-center justify-center">
+          <form onSubmit={handleSubmit} className="flex w-full h-11/12 flex-col justify-around">
             <input
               type="text"
               name="user_name"
               placeholder="Name"
               value={form.name}
               onChange={handleChange}
-              className={styles.input}
+              className="p-2.5 rounded-lg border border-gray-300 outline-none focus:outline-gray-300"
             />
 
             <input
@@ -64,7 +63,7 @@ export default function Signup() {
               placeholder="Email"
               value={form.email}
               onChange={handleChange}
-              className={styles.input}
+              className="p-2.5 rounded-lg border border-gray-300 outline-none focus:outline-gray-300"
             />
 
             <input
@@ -73,27 +72,27 @@ export default function Signup() {
               placeholder="Password"
               value={form.password}
               onChange={handleChange}
-              className={styles.input}
+              className="p-2.5 rounded-lg border border-gray-300 outline-none focus:outline-gray-300"
             />
 
             <select
               name="role"
               value={form.role}
               onChange={handleChange}
-              className={styles.select}
+              className="p-2.5 rounded-lg border border-gray-300 outline-none focus:outline-gray-300"
             >
               <option value="">Select Role</option>
               <option value="lab-assist">Lab Assistant</option>
               <option value="admin">Admin</option>
             </select>
 
-            <button type="submit" className={styles.button}>
+            <button type="submit" className="p-2.5 rounded-lg border-none bg-black text-white cursor-pointer">
               Signup
             </button>
           </form>
         </div>
 
-        <p className={styles.loginLink}>
+        <p className="absolute bottom-5">
           Already have an account? <Link to="/login">Login here</Link>
         </p>
       </div>
